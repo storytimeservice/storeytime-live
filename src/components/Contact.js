@@ -1,13 +1,15 @@
 import React from 'react'
 import { navigateTo } from 'gatsby-link'
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
-// import Recaptcha from 'react-google-recaptcha'
+import Recaptcha from 'react-google-recaptcha'
 
 import { FormErrors } from './FormError'
 
 import { HTMLContent } from './Content'
 
-//const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
+const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
+
+//console.log(RecaptchaKey)
 
 function encode(data) {
   return Object.keys(data)
@@ -66,9 +68,9 @@ class Contact extends React.Component {
     configureAnchors({ offset: -50, scrollDuration: 500 })
   }
 
-  // handleRecaptcha = value => {
-  //   this.setState({ 'g-recaptcha-response': value, recaptchaChecked: true })
-  // }
+  handleRecaptcha = value => {
+    this.setState({ 'g-recaptcha-response': value, recaptchaChecked: true })
+  }
 
   handleChange = e => {
     const name = e.target.name
@@ -202,13 +204,13 @@ class Contact extends React.Component {
                   />
                 </div>
 
-                {/* <div className="field"> */}
-                {/*   <Recaptcha */}
-                {/*     ref="recaptcha" */}
-                {/*     sitekey={RecaptchaKey} */}
-                {/*     onChange={this.handleRecaptcha} */}
-                {/*   /> */}
-                {/* </div> */}
+                <div className="field">
+                  <Recaptcha
+                    ref="recaptcha"
+                    sitekey={RecaptchaKey}
+                    onChange={this.handleRecaptcha}
+                  />
+                </div>
 
                 <ul className="actions">
                   <li>
@@ -228,12 +230,12 @@ class Contact extends React.Component {
 
               <FormErrors formErrors={this.state.formErrors} />
 
-              {/* {!this.state.recaptchaChecked && */}
-              {/*   this.state.recaptchaChecked !== null && ( */}
-              {/*     <p style={{ color: 'red', fontWeight: 'bold' }}> */}
-              {/*       Please Check Captcha */}
-              {/*     </p> */}
-              {/*   )} */}
+              {!this.state.recaptchaChecked &&
+                this.state.recaptchaChecked !== null && (
+                  <p style={{ color: 'red', fontWeight: 'bold' }}>
+                    Please Check Captcha
+                  </p>
+                )}
             </section>
             <ContactInfo contactInfoData={this.props} />
           </div>
