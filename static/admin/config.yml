@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: reguv760/gatsby-storeytime
+  name: git-gateway
+  repo: storytimeservice/storeytime-live
 
 media_folder: static/assets
 public_folder: assets
