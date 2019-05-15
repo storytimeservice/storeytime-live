@@ -70,7 +70,13 @@ export const eventPageQuery = graphql`
           eventDate
           eventStartTime
           eventEndTime
-          eventImage
+          eventImage {
+            childImageSharp {
+              fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           eventFee
           eventStreet
           eventCity

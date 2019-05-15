@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/Content'
+//import Content, { HTMLContent } from '../components/Content'
 
 import { SingerList } from './../components/singerlist'
 
@@ -65,7 +65,13 @@ export const singerPageQuery = graphql`
       frontmatter {
         singer {
           name
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           body
         }
       }

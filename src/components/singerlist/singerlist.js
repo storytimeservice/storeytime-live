@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { HTMLContent } from './../Content'
 
 import './singerlist.css'
@@ -8,7 +9,6 @@ export const SingerListTemplate = ({ singerListData }) => {
   const singerItems = [singerListData.singer][0]
 
   const PageContent = HTMLContent
-
   return (
     <div className="inner">
       <div
@@ -27,9 +27,10 @@ export const SingerListTemplate = ({ singerListData }) => {
             }}
           >
             <div className="singers-left">
-              {singers.image.length > 0 && (
-                <img src={`${singers.image}`} alt={`${singers.name} image`} />
-              )}
+              <Img
+                fluid={singers.image.childImageSharp.fluid}
+                alt={`${singers.name} image`}
+              />
             </div>
             <div className="singers-right">
               <h2>{singers.name}</h2>

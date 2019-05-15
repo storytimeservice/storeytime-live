@@ -80,7 +80,13 @@ export const homeQuery = graphql`
         bannerText
         bannerSlogan
         homeNavImages {
-          bgImage
+          bgImage {
+            childImageSharp {
+              fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           imageTitle
           imageText
           pagePath
