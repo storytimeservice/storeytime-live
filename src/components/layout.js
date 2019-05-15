@@ -34,7 +34,13 @@ export const LayoutTemplate = ({
             contactEmail
             contactAddress
             companyName
-            companyLogo
+            companyLogo {
+              childImageSharp {
+                fixed(height: 75) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

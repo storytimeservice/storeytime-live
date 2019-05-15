@@ -4,12 +4,9 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
 import Recaptcha from 'react-google-recaptcha'
 
 import { FormErrors } from './FormError'
-
 import { HTMLContent } from './Content'
 
 const RecaptchaKey = process.env.SITE_RECAPTCHA_KEY
-
-//console.log(RecaptchaKey)
 
 function encode(data) {
   return Object.keys(data)
@@ -65,7 +62,7 @@ class Contact extends React.Component {
   }
 
   componentDidMount() {
-    configureAnchors({ offset: -50, scrollDuration: 500 })
+    configureAnchors({ offset: -65, scrollDuration: 500 })
   }
 
   handleRecaptcha = value => {

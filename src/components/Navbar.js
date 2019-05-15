@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 // custom components
@@ -34,15 +35,30 @@ const NavbarStyles = styled.header`
       flex: 1;
     }
 
+    @media (min-width: 1116px) {
+      .nav-items ul {
+        justify-content: space-around;
+        flex-flow: row nowrap;
+      }
+    }
+    
     @media (max-width: 768px) {
       .nav-items {
         display: none;
       }
+      .nav-logo {
+        margin: 1rem auto;
+      }
+    }
+
+    .nav-items 
+    {
+      width: 100%;
     }
 
     .nav-items ul {
       list-style: none;
-      margin: 1rem;
+      margin: 0.5rem;
       padding: 0;
       display: flex;
       flex-flow: row wrap;
@@ -99,10 +115,8 @@ const ToggleButton = styled.div`
 `
 
 const LogoStyle = styled.div`
-  margin: 1rem 0;
-
   & img {
-    margin: 1rem 0;
+    margin: 0;
   }
 
   @media (max-width: 480px) {
@@ -123,14 +137,14 @@ const Navbar = props => {
         <div className="nav-logo">
           <Link to="/">
             <LogoStyle>
-              <img
-                src={`${props.companyLogo}`}
+              <Img
+                fixed={props.companyLogo.childImageSharp.fixed}
                 alt={`${props.companyName} logo`}
               />
             </LogoStyle>
           </Link>
         </div>
-        <div className="spacer" />
+
         <div className="nav-items">
           <ul>
             <li>

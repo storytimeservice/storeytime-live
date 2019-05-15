@@ -9,7 +9,9 @@ export const HomeNavTemplate = props => {
       {homeBGImage.map((img, index) => (
         <article
           key={'homeNavImage' + `${index}`}
-          style={{ backgroundImage: `url(${img.bgImage})` }}
+          style={{
+            backgroundImage: `url(${img.bgImage.childImageSharp.fluid.src})`,
+          }}
         >
           <header className="major">
             <h3>{`${img.imageTitle}`}</h3>
