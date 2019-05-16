@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: reguv760/storeytime-live
+  repo: storytimeservice/storeytime-live
 
 media_folder: static/assets
 public_folder: assets
