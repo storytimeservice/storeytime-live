@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   repo: storytimeservice/storeytime-live
-  branch: checkImage
 
 media_folder: static/assets
 public_folder: assets
