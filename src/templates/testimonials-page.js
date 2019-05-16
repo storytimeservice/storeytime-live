@@ -14,8 +14,9 @@ export const TestimonialPageTemplate = ({ testimonialData }) => {
     <>
       <header className="major">
         <h1>Testimonials</h1>
-        <TestimonialsList testimonialData={testimonialData} />
       </header>
+
+      <TestimonialsList testimonialData={testimonialData} />
     </>
   )
 }

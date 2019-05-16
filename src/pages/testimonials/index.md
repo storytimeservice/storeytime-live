@@ -1,10 +1,12 @@
 ---
 templateKey: testimonials-page
 testimonials:
-  - testimonialName: Joe Joe
+  - testimonialName: Jane Simmons
     testimonialImage: ''
-    testimonialQuote: 'Ut ullamco ullamco proident ad aliqua est enim officia. Ullamco anim cillum officia anim ex velit dolore duis. Irure ut exercitation eu reprehenderit eu officia. Minim enim enim ex incididunt tempor do enim esse dolore. Proident proident voluptate consectetur esse veniam ad voluptate sit ut cupidatat. Laborum anim officia et aliqua commodo aute minim qui quis nulla proident ullamco ut amet.'
-  - testimonialName: Mary Jane
-    testimonialImage: 'maryjane.jpg'
-    testimonialQuote: 'Irure ut exercitation eu reprehenderit eu officia. Minim enim enim ex incididunt tempor do enim esse dolore. Proident proident voluptate consectetur esse veniam ad voluptate sit ut cupidatat.'
+    testimonialQuote: >-
+      Thank you for coming, and sharing your wonderful singing talents! TK, Kinder, 1st, and 2nd grades had a blast!
+  - testimonialName: Norm Roper
+    testimonialImage: ''
+    testimonialQuote: >-
+      THANK YOU!!! THANK YOU!! Patrick was such a huge hit last night and standing ovation no less.<br/>Incredibly encouraging and inspiring for this audience!<br/>Much appreciation to you and many thanks to Beth too for connecting us.
 ---
