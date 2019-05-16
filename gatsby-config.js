@@ -44,7 +44,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: `${__dirname}/static`,
+              destinationDir: 'static',
             },
           },
         ],
