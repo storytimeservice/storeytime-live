@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
-  repo: storytimeservice/storeytime-live
+  repo: reguv760/storeytime-live
+  branch: testimonials
 
 media_folder: static/assets
 public_folder: assets
@@ -27,6 +28,35 @@ collections:
               - {
                   label: 'Youtube Embed URL',
                   name: 'videoLink',
+                  widget: 'string',
+                }
+      - file: 'src/pages/testimonials/index.md'
+        label: 'Testimonial List'
+        name: 'testimonialList'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'testimonial-page',
+            }
+          - label: 'Testimonials'
+            name: 'testimonials'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Testimonial Name',
+                  name: 'testimonialName',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Testimonial Image',
+                  name: 'testimonialImage',
+                  widget: 'image',
+                }
+              - {
+                  label: 'Testimonial Quote',
+                  name: 'testimonialQuote',
                   widget: 'string',
                 }
 
