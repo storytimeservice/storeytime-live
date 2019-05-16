@@ -66,11 +66,6 @@ export const singerPageQuery = graphql`
         singer {
           name
           image {
-            childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
-            }
             publicURL
           }
           body

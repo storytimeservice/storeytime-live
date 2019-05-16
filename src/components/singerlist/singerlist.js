@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import { HTMLContent } from './../Content'
 
 import './singerlist.css'
@@ -27,17 +26,10 @@ export const SingerListTemplate = ({ singerListData }) => {
             }}
           >
             <div className="singers-left">
-              {!!singers.image && !!singers.image.childImageSharp ? (
-                <Img
-                  fluid={singers.image.childImageSharp.fluid}
-                  alt={`${singers.name} image`}
-                />
-              ) : (
-                <img
-                  src={singers.image.publicURL}
-                  alt={`${singers.name} image`}
-                />
-              )}
+              <img
+                src={singers.image.publicURL}
+                alt={`${singers.name} image`}
+              />
             </div>
             <div className="singers-right">
               <h2>{singers.name}</h2>

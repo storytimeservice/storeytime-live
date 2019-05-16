@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 // custom components
@@ -115,9 +114,6 @@ const ToggleButton = styled.div`
 `
 
 const Navbar = props => {
-  const companyIMG = props.companyLogo.childImageSharp.fixed
-
-  //console.log(companyIMG.presentationWidth)
   return (
     <NavbarStyles>
       <nav className="navbar">
@@ -127,9 +123,8 @@ const Navbar = props => {
 
         <div className="nav-logo">
           <Link to="/">
-            <Img
-              fadeIn={false}
-              fixed={companyIMG}
+            <img
+              src={`${props.companyLogo.publicURL}`}
               alt={`${props.companyName} logo`}
             />
           </Link>
