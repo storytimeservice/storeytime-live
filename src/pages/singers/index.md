@@ -20,7 +20,7 @@ singer:
       and autistic performers. In addition to singing with Storeytime he
       performs regularly with Rex and Friends, a charity dedicated to raising
       funds for blind and autistic singers and musicians.
-    image: /assets/patrick-on-mic.png
+    image: ../assets/patrick-on-mic.png
     name: Patrick Storey
   - body: >-
       <b>Beth Rohde</b> has been singing and directing jazz ensembles for 15
