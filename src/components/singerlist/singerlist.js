@@ -27,7 +27,7 @@ export const SingerListTemplate = ({ singerListData }) => {
             }}
           >
             <div className="singers-left">
-              {!!image && !!image.childImageSharp ? (
+              {!!singers.image && !!singers.image.childImageSharp ? (
                 <Img
                   fluid={singers.image.childImageSharp.fluid}
                   alt={`${singers.name} image`}
