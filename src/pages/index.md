@@ -17,29 +17,29 @@ bannerText: >-
   school or event.
 bannerSlogan: Creating Possibility Through Music
 homeNavImages:
-  - bgImage: /assets/piano.jpg
+  - image: /assets/piano.jpg
     imageText: >-
       Storeytime is a 5-voice group centered around Patrick Storey, an autistic
       singer with an incredible musical gift
     imageTitle: The Singers
     pagePath: singers/
-  - bgImage: /assets/guitar.jpg
+  - image: /assets/guitar.jpg
     imageText: Find out what people are saying
     imageTitle: Testimonials
     pagePath: testimonials/
-  - bgImage: /assets/bass.jpg
+  - image: /assets/bass.jpg
     imageText: Watch videos of Storeytime in action
     imageTitle: Videos
     pagePath: videos/
-  - bgImage: /assets/drums.jpg
+  - image: /assets/drums.jpg
     imageText: Find out when Storeytime is singing next
     imageTitle: Events
     pagePath: events/
-  - bgImage: /assets/microphone.jpg
+  - image: /assets/microphone.jpg
     imageText: Help keep Storeytime growing strong
     imageTitle: Donate
     pagePath: donate/
-  - bgImage: /assets/audience.jpg
+  - image: /assets/audience.jpg
     imageText: Reach out and connect with Storeytime
     imageTitle: Contact
     pagePath: '#contact-form'
@@ -67,4 +67,3 @@ contactAddress: |-
 
   Los Angeles, CA 90000
 ---
-

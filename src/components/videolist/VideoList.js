@@ -102,11 +102,7 @@ export const VideoListTemplate = ({ videoListData }) => {
 }
 
 const VideoList = ({ videoListData }) => {
-  return (
-    <section>
-      <VideoListTemplate videoListData={videoListData} />
-    </section>
-  )
+  return <VideoListTemplate videoListData={videoListData} />
 }
 
 export { VideoList }
