@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Layout from './../components/layout'
-import { VideoList } from './../components/videolist'
+import { TestimonialsList } from './../components/testimonialslist'
 
 //this is my template for CMS:::
 //to access child component, parent component
@@ -14,6 +14,7 @@ export const TestimonialPageTemplate = ({ testimonialData }) => {
     <>
       <header className="major">
         <h1>Testimonials</h1>
+        <TestimonialsList testimonialData={testimonialData} />
       </header>
     </>
   )
@@ -21,7 +22,7 @@ export const TestimonialPageTemplate = ({ testimonialData }) => {
 
 //define custom data object from graphQL
 TestimonialPageTemplate.propTypes = {
-  videoListData: PropTypes.object,
+  TestimonialData: PropTypes.object,
 }
 
 //this is my component:::
@@ -29,8 +30,6 @@ const TestimonialPage = ({ data }) => {
   //store data as markdownRemarks: post
 
   const { markdownRemark: post } = data
-
-  console.log(post.frontmatter)
 
   //post.frontmatter to access data object:::
   return (
@@ -44,7 +43,8 @@ const TestimonialPage = ({ data }) => {
           content={`${data.site.siteMetadata.description}`}
         />
       </Helmet>
-      {/* <TestimonialPageTemplate testimonialData={post.frontmatter} /> */}
+
+      <TestimonialPageTemplate testimonialData={post.frontmatter} />
     </Layout>
   )
 }
@@ -69,7 +69,7 @@ export const TestimonialQuery = graphql`
         description
       }
     }
-    markdownRemark(frontmatter: { templateKey: { eq: "testimonial-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "testimonials-page" } }) {
       frontmatter {
         testimonials {
           testimonialName

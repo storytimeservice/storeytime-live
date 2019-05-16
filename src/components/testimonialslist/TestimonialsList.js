@@ -1,68 +1,15 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
-const VideoListStyle = styled.div`
-  border: 2px dashed #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  height: 325px;
-  margin-bottom: 25px;
-  transition: all 300ms ease-out;
-  width: 100%;
-  padding: 15px;
-  display: flex;
-  flex-flow: row wrap;
-
-  @media screen and (max-width: 980px) {
-    height: calc(100% + 200px);
-    margin-top: 25px;
-  }
-
-  .video-media-object-container {
-    height: 100%;
-    width: 60%;
-
-    @media screen and (max-width: 980px) {
-      width: 100%;
-      height: 375px;
-    }
-
-    .video-media-object {
-      background-position: 0 0;
-      background-size: cover;
-      height: 100%;
-    }
-  }
-
-  .video-media-body {
-    background-color: #fff;
-    height: 100%;
-    padding: 12px 15px;
-    width: 40%;
-    display: flex;
-    align-items: center;
-
-    @media screen and (max-width: 980px) {
-      width: 100%;
-    }
-  }
-
-  .video-media-body-top {
-    display: block;
-  }
-
-  .video-media-body-heading {
-    display: block;
-    margin-top: 10px;
-    color: #000;
-    line-height: 1.2em;
-  }
-`
+import { HTMLContent } from '../Content'
+import { Card } from '../elements/Card'
 
 export const TestimonialsListTemplate = ({ testimonialData }) => {
   //this is my video array data location
-  //const videoItems = [videoListData.videos][0]
+  const testimonialItems = [testimonialData.testimonials][0]
+  const PageContent = HTMLContent
 
+  console.log(testimonialItems)
   return (
     <div className="inner">
       <div
@@ -72,28 +19,26 @@ export const TestimonialsListTemplate = ({ testimonialData }) => {
           margin: '2rem 0 1rem 0',
         }}
       >
-        {/* videoItems.map((videos, index) => (
+        {testimonialItems.map((testimony, index) => (
           <div className="col-6">
-            <VideoListStyle key={videos.videoTitle + index}>
-              <div className="video-media-object-container">
-              
+            <Card key={testimony.testimonialName + index}>
+              <div className="testimonyImage">{testimony.testimonialImage}</div>
+              <div className="testimonyContent">
+                <PageContent
+                  className="testimonialQuote"
+                  content={testimony.testimonialQuote}
+                />
+                <h4>{testimony.testimonialName} </h4>
               </div>
-              <div className="video-media-body">
-                <h3>
-                  <span className="video-media-body-heading">
-                    {videos.videoTitle}
-                  </span>
-                </h3>
-              </div>
-            </VideoListStyle>
+            </Card>
           </div>
-        )) */}
+        ))}
       </div>
     </div>
   )
 }
 
-const TestimonialsList = ({ videoListData }) => {
+const TestimonialsList = ({ testimonialData }) => {
   return (
     <section>
       <TestimonialsListTemplate testimonialData={testimonialData} />
