@@ -78,7 +78,7 @@ collections:
                   label: 'Image',
                   name: 'image',
                   widget: 'custompathimage',
-                  customMediaPath: '../assets/',
+                  customMediaPath: './assets/',
                   rawMediaPath: 'https://raw.githubusercontent.com/storeytimeservice/storeytime-live/master/assets/',
                 }
               - { label: 'Body', name: 'body', widget: 'markdown' }
