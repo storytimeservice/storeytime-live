@@ -23,11 +23,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           'gatsby-remark-relative-images',
+          'gatsby-plugin-netlify-cms-paths',
           {
             resolve: 'gatsby-remark-images',
             options: {
