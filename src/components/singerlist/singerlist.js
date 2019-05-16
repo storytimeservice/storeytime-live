@@ -27,10 +27,17 @@ export const SingerListTemplate = ({ singerListData }) => {
             }}
           >
             <div className="singers-left">
-              <Img
-                fluid={singers.image.childImageSharp.fluid}
-                alt={`${singers.name} image`}
-              />
+              {singers.image.childImageSharp.fluid !== undefined ? (
+                <Img
+                  fluid={singers.image.childImageSharp.fluid}
+                  alt={`${singers.name} image`}
+                />
+              ) : (
+                <img
+                  src={singers.image.absolutePath}
+                  alt={`${singers.name} image`}
+                />
+              )}
             </div>
             <div className="singers-right">
               <h2>{singers.name}</h2>
