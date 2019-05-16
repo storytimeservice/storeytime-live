@@ -8,10 +8,20 @@ import SingerListPreview from './preview-templates/SingerListPreview'
 import VideoListPreview from './preview-templates/VideoListPreview'
 
 import siteStyle from './../assets/scss/main.scss'
+import {
+  CustomPathImageControl,
+  CustomPathImagePreview,
+} from './customPathImage.js'
 
 CMS.registerPreviewStyle(siteStyle)
 
 //preview template names has to match names in config.yml
+CMS.registerWidget(
+  'custompathimage',
+  CustomPathImageControl,
+  CustomPathImagePreview
+)
+
 CMS.registerPreviewTemplate('donate', DonatePreview)
 CMS.registerPreviewTemplate('testimonialList', TestimonialPreview)
 CMS.registerPreviewTemplate('eventsList', EventPreview)

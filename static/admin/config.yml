@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   repo: storytimeservice/storeytime-live
+  branch: checkImage
 
 media_folder: static/assets
 public_folder: assets
@@ -74,7 +75,13 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Image', name: 'image', widget: 'image' }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: 'custompathimage',
+                  customMediaPath: '../assets/',
+                  rawMediaPath: 'https://raw.githubusercontent.com/storeytimeservice/repo/master/assets/',
+                }
               - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - file: 'src/pages/events/index.md'
