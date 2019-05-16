@@ -34,7 +34,7 @@ singer:
       While earning her Masters degree, she taught private students and directed
       the USC Concert Vocal Jazz Ensemble. Beth continues to perform as a solo
       artist and with various noteworthy acts!
-    image: /assets/beth-rohde.jpg
+    image: ../assets/beth-rohde.jpg
     name: Beth Rohde
   - body: >-
       <b>Jamey Schrick</b> is a veteran singer and actor from Iowa, now living
@@ -50,7 +50,7 @@ singer:
       voice, music theory, sight singing, beginning guitar and trumpet at Coast
       Music Conservatory in Hermosa Beach. In his free time he hosts a YouTube
       “cooking” and travel show called Here Taste This with his wife Mary.
-    image: /assets/jamey-schrick.png
+    image: ../assets/jamey-schrick.png
     name: Jamey Schrick
   - body: >-
       <b>Kieran Moriah</b> is a third year undergraduate at the University of
@@ -61,7 +61,7 @@ singer:
       vocal teacher at Coast Music Conservatory in Hermosa Beach. Throughout her
       career she has been in over 10 vocal groups that have competed in
       California.
-    image: /assets/kieran-moriah.jpg
+    image: ../assets/kieran-moriah.jpg
     name: 'Kieran Moriah '
   - body: >-
       Singer, arranger and guitarist <b>Michael Kohl</b> hails from Milwaukee,
@@ -82,7 +82,6 @@ singer:
       Michael toured for many years with Dr.Iven, XY Unlimited and Cloudwalkers
       and looks to the future with stars in his eyes and sweet five-part jazz
       chords in his heart.
-    image: /assets/michael-kohl.jpg
+    image: ../assets/michael-kohl.jpg
     name: Michael Kohl
 ---
-
