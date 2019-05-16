@@ -44,11 +44,7 @@ export const SingerListTemplate = ({ singerListData }) => {
 }
 
 const SingerList = ({ singerListData }) => {
-  return (
-    <section>
-      <SingerListTemplate singerListData={singerListData} />
-    </section>
-  )
+  return <SingerListTemplate singerListData={singerListData} />
 }
 
 export { SingerList }

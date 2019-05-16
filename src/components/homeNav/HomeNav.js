@@ -10,7 +10,7 @@ export const HomeNavTemplate = props => {
         <article
           key={'homeNavImage' + `${index}`}
           style={{
-            backgroundImage: `url(${img.bgImage.childImageSharp.fluid.src})`,
+            backgroundImage: `url(${img.image.childImageSharp.fluid.src})`,
           }}
         >
           <header className="major">
