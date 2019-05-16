@@ -19,7 +19,7 @@ const NavbarStyles = styled.header`
     align-items: center;
 
     .nav-logo {
-      margin: 1rem 3rem
+      margin: 0 1rem
     }
 
     .nav-logo a {
@@ -88,7 +88,7 @@ const ToggleButton = styled.div`
     flex-direction: column;
     justify-content: space-around;
     height: 24px;
-    width: 30px;
+    width: 24px;
     background: transparent;
     border: none;
     box-shadow: none;
@@ -107,26 +107,17 @@ const ToggleButton = styled.div`
     }
 
     .toggle-button-line {
-      width: 30px;
+      width: 24px;
       height: 2px;
       background: #fff;
     }
   }
 `
 
-const LogoStyle = styled.div`
-  & img {
-    margin: 0;
-  }
-
-  @media (max-width: 480px) {
-    & img {
-      width: 275px;
-    }
-  }
-`
-
 const Navbar = props => {
+  const companyIMG = props.companyLogo.childImageSharp.fixed
+
+  //console.log(companyIMG.presentationWidth)
   return (
     <NavbarStyles>
       <nav className="navbar">
@@ -136,12 +127,11 @@ const Navbar = props => {
 
         <div className="nav-logo">
           <Link to="/">
-            <LogoStyle>
-              <Img
-                fixed={props.companyLogo.childImageSharp.fixed}
-                alt={`${props.companyName} logo`}
-              />
-            </LogoStyle>
+            <Img
+              fadeIn={false}
+              fixed={companyIMG}
+              alt={`${props.companyName} logo`}
+            />
           </Link>
         </div>
 

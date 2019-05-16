@@ -36,7 +36,7 @@ export const LayoutTemplate = ({
             companyName
             companyLogo {
               childImageSharp {
-                fixed(height: 75) {
+                fixed(width: 325) {
                   ...GatsbyImageSharpFixed
                 }
               }
