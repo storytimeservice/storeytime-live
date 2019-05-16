@@ -83,6 +83,7 @@ module.exports = {
         publicPath: 'admin',
       },
     },
+    `gatsby-plugin-netlify-cms-paths`,
     'gatsby-plugin-sitemap',
   ],
 }
