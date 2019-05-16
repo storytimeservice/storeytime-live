@@ -15,7 +15,7 @@ import {
 
 CMS.registerPreviewStyle(siteStyle)
 
-preview template names has to match names in config.yml
+//preview template names has to match names in config.yml
 CMS.registerWidget(
   'custompathimage',
   CustomPathImageControl,
