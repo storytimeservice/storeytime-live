@@ -23,10 +23,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
@@ -83,7 +85,6 @@ module.exports = {
         publicPath: 'admin',
       },
     },
-    `gatsby-plugin-netlify-cms-paths`,
     'gatsby-plugin-sitemap',
   ],
 }
