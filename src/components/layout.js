@@ -35,11 +35,7 @@ export const LayoutTemplate = ({
             contactAddress
             companyName
             companyLogo {
-              childImageSharp {
-                fixed(width: 325) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
+              publicURL
             }
           }
         }

@@ -21,6 +21,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -37,20 +38,18 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1200,
+              // maxWidth: 1200,
             },
           },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: '${__dirname}/static',
+              destinationDir: 'static',
             },
           },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -75,6 +74,7 @@ module.exports = {
         head: true,
       },
     },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
@@ -83,6 +83,5 @@ module.exports = {
         publicPath: 'admin',
       },
     },
-    'gatsby-plugin-sitemap',
   ],
 }
