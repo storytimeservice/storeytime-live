@@ -22,14 +22,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
-          'gatsby-plugin-netlify-cms-paths',
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'assets',
+            },
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -48,6 +50,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -72,6 +75,7 @@ module.exports = {
         head: true,
       },
     },
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
@@ -80,6 +84,5 @@ module.exports = {
         publicPath: 'admin',
       },
     },
-    'gatsby-plugin-sitemap',
   ],
 }
