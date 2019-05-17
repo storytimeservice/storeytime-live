@@ -70,9 +70,7 @@ export const eventPageQuery = graphql`
           eventDate
           eventStartTime
           eventEndTime
-          eventImage {
-            publicURL
-          }
+          eventImage
           eventFee
           eventStreet
           eventCity

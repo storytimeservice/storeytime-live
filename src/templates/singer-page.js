@@ -65,9 +65,7 @@ export const singerPageQuery = graphql`
       frontmatter {
         singer {
           name
-          image {
-            publicURL
-          }
+          image 
           body
         }
       }

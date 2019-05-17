@@ -80,9 +80,7 @@ export const homeQuery = graphql`
         bannerText
         bannerSlogan
         homeNavImages {
-          image {
-            publicURL
-          }
+          image
           imageTitle
           imageText
           pagePath

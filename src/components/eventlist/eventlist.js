@@ -37,7 +37,7 @@ export const EventListTemplate = ({ eventListData }) => {
                 <div
                   className="card-object"
                   style={{
-                    backgroundImage: `url(${eventItem.eventImage.publicURL})`,
+                    backgroundImage: `url(${eventItem.eventImage})`,
                   }}
                 />
               </div>
