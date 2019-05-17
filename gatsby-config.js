@@ -1,12 +1,26 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://storeytime.netlify.com`,
+    siteUrl: `https://storeytime-live.netlify.com`,
     title: `Storeytime Online`,
     description:
       'Storeytime is a 5-voice group centered around Patrick Storey, an autistic singer with an incredible musical gift. The group shows what is possible for people with autism and other learning differences. Audiences are treated to an incredible, interactive performance where they can experience how Patrick communicates and thrives through his love for music.',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: 'assets',
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -48,20 +62,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/assets`,
-        name: 'assets',
-      },
-    },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
