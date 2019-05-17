@@ -124,7 +124,7 @@ const Navbar = props => {
         <div className="nav-logo">
           <Link to="/">
             <img
-              src={`${props.companyLogo.publicURL}`}
+              src={`${props.companyLogo}`}
               alt={`${props.companyName} logo`}
             />
           </Link>

@@ -34,9 +34,7 @@ export const LayoutTemplate = ({
             contactEmail
             contactAddress
             companyName
-            companyLogo {
-              publicURL
-            }
+            companyLogo
           }
         }
       }

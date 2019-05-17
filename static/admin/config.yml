@@ -29,6 +29,7 @@ collections:
                   name: 'videoLink',
                   widget: 'string',
                 }
+
       - file: 'src/pages/testimonials/index.md'
         label: 'Testimonial List'
         name: 'testimonialList'
