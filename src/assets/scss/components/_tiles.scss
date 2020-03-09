@@ -159,12 +159,19 @@
       height: 30vh;
       max-height: 30em;
       min-height: 20em;
+      &:last-child {
+        width: 100%;
+      }
     }
   }
 
   @include breakpoint(medium) {
     article {
       width: 50% !important;
+
+      &:last-child {
+        width: 100% !important;
+      }
     }
   }
 
@@ -174,6 +181,10 @@
       height: 16em;
       max-height: none;
       min-height: 0;
+
+      &:last-child {
+        width: 100%;
+      }
 
       h3 {
         font-size: 1.5em;
