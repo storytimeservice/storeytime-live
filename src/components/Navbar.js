@@ -137,11 +137,11 @@ const Navbar = props => {
                 The Singers
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/testimonials/" activeStyle={{ color: '#00aaff' }}>
                 Testimonials
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/videos/" activeStyle={{ color: '#00aaff' }}>
                 Videos
